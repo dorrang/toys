@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: rgba(245, 241, 238, 0.199);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    /* padding-top: 20px; */
+}
+
+i:hover {
+    text-shadow: 3px 3px 0 rgba(150, 150, 150, 0.288);
+}
+
+a {
+    color: unset;
+}
+
+a:active {
+    color: unset;
+}
+
+button {
+    cursor: pointer;
+    /* border: none; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.034);
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.app-main {
+    min-height: 90vh;
+}
+
+
+/* HEADER */
+
+nav {
+    padding: 20px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    background-image: url(../../img/giphy1.gif);
+    /* background-size: 100%; */
+    transition: 10s;
+    background-position: center;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    margin-inline-end: 15px;
+    border: 2px solid rgb(32, 32, 32);
+    box-shadow: 0 0 10px rgba(19, 19, 19, 0.137);
+}
+
+
+/* APP */
+
+.toy-app {
+    /* min-height: 90vh; */
+    text-align: center;
+}
+
+
+/* FILTER */
+
+.car-filter {
+    padding: 10px;
+}
+
+
+/* LIST */
+
+.car-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* PREVIEW */
+
+.edit-section {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: center;
+}
+
+.edit-section button {
+    margin: 5px 0;
+}
+
+td {
+    padding: 10px;
+}
+
+tr>td:first-child {
+    width: 150px;
+}
+
+tr:hover {
+    /* background-color: rgba(107, 107, 107, 0.074); */
+    background: linear-gradient(-5deg, #f7fdffb7, rgba(251, 248, 255, 0.562), #eeeeee88, rgba(253, 253, 253, 0.342));
+    background-size: 100% 150%;
+    animation: gradient 15s ease infinite;
+    transition: 0.6s;
+}
+
+tr {
+    border-bottom: 1px dashed rgba(94, 94, 94, 0.349);
+}
+
+td:nth-child(2) {
+    text-align: start;
+    padding-inline-start: 20px;
+}
+
+
+/* DETAILS */
+
+.toy-details {
+    margin: 20px 0;
+}
+
+.toy-details-card {
+    border-radius: 10px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    box-shadow: 0 0 15px rgba(32, 32, 32, 0.13);
+    height: 40%;
+    width: 35%;
+    min-width: fit-content;
+    padding: 20px;
+}
+
+
+/* EDIT */
+
+.toy-edit {
+    padding: 20px;
+}
+
+form {
+    margin: 10px 0;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 10px;
+}
+
+
+/* ROUTES */
+
+
+/* USER - MSG */
+
+.user-msg {
+    background-color: white;
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    min-width: 200px;
+}
+
+.user-msg button {
+    float: right;
+}
+
+.success {
+    background-color: rgb(30, 207, 30);
+}
+
+.error {
+    background-color: red;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.todo-app ul span {
+    cursor: pointer;
+}
+
+.toy-img {
+    height: 120px;
+}

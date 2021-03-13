@@ -1,0 +1,48 @@
+@import './cmps/app.css';
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: rgba(245, 241, 238, 0.199);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    /* padding-top: 20px; */
+}
+
+i:hover {
+    text-shadow: 3px 3px 0 rgba(150, 150, 150, 0.288);
+}
+
+a {
+    color: unset;
+}
+
+a:active {
+    color: unset;
+}
+
+button {
+    cursor: pointer;
+    /* border: none; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.034);
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
