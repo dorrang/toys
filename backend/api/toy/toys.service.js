@@ -5,6 +5,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 
 
+
 module.exports = {
     query,
     getById,
@@ -87,7 +88,9 @@ async function save(toy) {
                 _id: ObjectId(toy._id),
                 name: toy.name,
                 price: toy.price,
-                type: toy.type
+                type: toy.type,
+                inStock: true,
+                createdAt: ObjectId(toy._id).getTimestamp()
             };
             const collection = await dbService.getCollection('toy')
             await collection.updateOne({ '_id': toyToSave._id }, { $set: toyToSave })
@@ -96,7 +99,12 @@ async function save(toy) {
             const toyToAdd = {
                 name: toy.name,
                 price: toy.price,
-                type: toy.type
+                type: toy.type,
+                createdAt: ObjectId(toy._id).getTimestamp(),
+                url: getRandomInt(1, 100),
+                inStock: true
+
+
             };
             const collection = await dbService.getCollection('toy');
             await collection.insertOne(toyToAdd);
@@ -108,6 +116,11 @@ async function save(toy) {
     }
 }
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+}
 
 
 

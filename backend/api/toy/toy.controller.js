@@ -16,8 +16,9 @@ const logger = require('../../services/logger.service');
 // })
 
 async function getToys(req, res) {
+    console.log('getting')
     try {
-        const toys = await toyservice.query();
+        const toys = await toyService.query();
         res.send(toys);
     } catch (err) {
         logger.error('Failed to get toys', err);

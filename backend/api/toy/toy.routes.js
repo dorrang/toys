@@ -9,8 +9,11 @@ const router = express.Router()
 
 router.get('/', log, getToys);
 router.get('/:id', log, getToy);
-router.post('/', requireAuth, saveToy); // add
-router.put('/:id', requireAuth, saveToy); //update
-router.delete('/:id', requireAuth, removeToy);
+router.post('/', saveToy); // add
+router.put('/:id', saveToy); //update
+// router.post('/', requireAuth, saveToy); // add
+// router.put('/:id', requireAuth, saveToy); //update
+router.delete('/:id', removeToy);
+// router.delete('/:id', requireAuth, removeToy);
 
 module.exports = router
